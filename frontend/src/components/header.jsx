@@ -9,7 +9,7 @@ export default function Headers(){
                     <img src={logo}></img>
                 </div>
                 <div className="titulo">
-                    <li>Caminando Por Patitas</li>
+                    <li>En Camino Por Patitas</li>
                 </div>
             </div>
         </nav>

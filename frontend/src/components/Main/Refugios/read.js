@@ -9,28 +9,17 @@ export default function Read() {
   useEffect(() => {
     axios.get(`http://localhost:8022/api/refugios`)
       .then((response) => {
+        console.log(response.data.refugios.id);
         setAPIData(response.data.refugios);
       })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
   }, []);
 
   const setData = (data) => {
-    const { nombre, direccion, contacto } = data;
+    const {id, nombre, direccion, contacto } = data;
+    localStorage.setItem('Id', id);
     localStorage.setItem('Nombre', nombre);
     localStorage.setItem('Direccion', direccion);
     localStorage.setItem('Contacto', contacto);
-  };
-
-  const onDelete = (_id) => {
-    axios.delete(`http://localhost:8022/api/refugios/${_id}`)
-      .then(() => {
-        getData();
-      })
-      .catch((error) => {
-        console.error("Error deleting data:", error);
-      });
   };
 
   const getData = () => {
@@ -38,9 +27,14 @@ export default function Read() {
       .then((getData) => {
         setAPIData(getData.data);
       })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
+  };
+
+
+  const onDelete = (id) => {
+    axios.delete(`http://localhost:8022/api/refugios/${id}`)
+      .then(() => {
+        getData();
+      })
   };
 
   return (
@@ -60,7 +54,7 @@ export default function Read() {
         </Table.Header>
         <Table.Body>
           {APIData.map((data) => (
-            <Table.Row key={data._id}>
+            <Table.Row key={data.id}>
               <Table.Cell>{data.nombre}</Table.Cell>
               <Table.Cell>{data.direccion}</Table.Cell>
               <Table.Cell>{data.contacto}</Table.Cell>
@@ -72,7 +66,7 @@ export default function Read() {
                 </Link>
               </Table.Cell>
               <Table.Cell>
-                <Button negative onClick={() => onDelete(data._id)}>
+                <Button negative onClick={() => onDelete(data.id)}>
                   Eliminar
                 </Button>
               </Table.Cell>

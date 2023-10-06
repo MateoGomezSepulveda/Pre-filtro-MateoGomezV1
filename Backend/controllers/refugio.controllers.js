@@ -16,8 +16,8 @@ const getRefugio = async(req, res) =>{
 }
 
 const postRefugio = async(req, res) =>{
-    const {nombre, direccion, contacto} = req.body;
-    const refugio = new Refugio({nombre, direccion, contacto});
+    const {id,nombre, direccion, contacto} = req.body;
+    const refugio = new Refugio({id,nombre, direccion, contacto});
     await refugio.save();
     res.json({
         "msg": "post api",

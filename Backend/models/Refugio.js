@@ -1,6 +1,10 @@
 const {Schema, model} = require('mongoose');
 
 const RefugioSchema = Schema({
+    id:{
+        type:Number,
+        required: [true, 'El id es Obligatorio']
+    },
     nombre:{
         type:String,
         required: [true, 'El nombre del refugio es requerido']
