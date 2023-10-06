@@ -1,0 +1,85 @@
+body {
+}
+.navbar {
+    display: flex;
+    width: 1520px;
+    background-color: aliceblue;
+    height: 61px;
+}
+
+.logo img {
+    padding: 1px;
+    height: 60px;
+}
+
+.titulo {
+    width: 350px;
+    margin-left: 450px;
+    display: flex;
+    padding: 10px;
+    background-color: bisque;
+}
+
+.titulo li{
+    display: flex;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titulo2 {
+    width: 170px;
+    margin-left: 200px;
+    display: flex;
+    padding: 20px;
+    background-color: bisque;
+}
+
+.titulo2 a{
+    display: flex;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titulo3 {
+    width: 170px;
+    margin-left: 10px;
+    display: flex;
+    padding: 20px;
+    background-color: bisque;
+}
+
+.titulo3 a{
+    display: flex;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.parte-izquierda{
+    margin-top: 7px;
+    background-image: url('./frontend/src/fondo3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.7;
+    height: 550px;
+    width: 250px;
+    position: absolute;
+}
+
+.parte-media{
+    margin-top: 2px;
+    background-color: aliceblue;
+    height: 550px;
+    width: 1240px;   
+    margin-left: 270px;
+    position: absolute;
+}
+
+.footer{
+    display: flex;
+    width: 1510px;
+    margin-top: 560px;
+    height: 60px;
+    position: relative;
+    background-color: black;
+}
+

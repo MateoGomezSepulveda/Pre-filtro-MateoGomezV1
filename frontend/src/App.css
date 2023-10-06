@@ -1,0 +1,156 @@
+
+.navbar {
+    display: flex;
+    width: 1534px;
+    background-size: cover;
+    height: 61px;
+    opacity: 0.9;
+}
+
+.logo img {
+    margin-left:80px;
+    padding: 1px;
+    height: 60px;
+}
+
+.titulo {
+    width: 350px;
+    margin-left: 100px;
+    display: flex;
+    padding: 10px;
+}
+
+.titulo li{
+    color: rgb(7, 7, 7);
+    display: flex;
+    font-size: xx-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titulo2 {
+    width: 170px;
+    margin-left: 200px;
+    display: flex;
+    padding: 20px;
+}
+
+.titulo2 a{
+    color: rgb(8, 8, 8);
+    display: flex;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titulo3 {
+    width: 170px;
+    margin-left: 10px;
+    display: flex;
+    padding: 20px;
+}
+
+.titulo3 a{
+    color: rgb(19, 19, 19);
+    display: flex;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+.footer{
+
+    background-size: cover;
+    display: flex;
+    width: 1530px;
+    margin-top: 560px;
+    position: relative;
+    background-color: black;
+}
+
+.div-container {
+    margin: 20px;
+  }
+  
+  
+  .div-container a {
+    text-decoration: none;
+  }
+  
+  
+  .Table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; 
+  }
+  
+  .Table th, .Table td {
+    border: 1px solid #ddd; 
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .Table th {
+    background-color: #f2f2f2;
+  }
+  
+  
+  .Table tr:nth-child(odd) {
+    background-color: #f9f9f9; 
+  }
+  
+  
+  .Table Button {
+    padding: 6px 12px;
+    margin: 0;
+  }
+  
+ 
+  .Table tbody tr:hover {
+    background-color: #f0f0f0;
+  }
+  .container {
+    margin: 20px;
+  }
+  
+  Button {
+    margin-right: 5px;
+  }
+
+  
+  Table.Body tr:hover {
+    background-color: #f0f0f0;
+  }
+
+  .link-1{
+    margin-left: 700px;
+    position: absolute;
+    top: 20px;
+  }
+  .link-2{
+    margin-left: 780px;
+    position: absolute;
+    top: 20px;
+  }
+  .link-3{
+    margin-left: 900px;
+    position: absolute;
+    top: 20px;
+  }
+  .link-4{
+    margin-left: 1010px;
+    position: absolute;
+    top: 20px;
+  }
+  .link-5{
+    margin-left: 1100px;
+    position: absolute;
+    top: 20px;
+  }
+
+  .link-0{
+    margin-left: 1200px;
+    position: absolute;
+    top: 20px;
+  }
+
