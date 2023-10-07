@@ -1,3 +1,4 @@
+const { generateJWT } = require('../helpers/generate.JWT.js');
 const Refugio = require('../models/Refugio.js');
 
 const getRefugio = async(req, res) =>{
@@ -19,9 +20,15 @@ const postRefugio = async(req, res) =>{
     const {id,nombre, direccion, contacto} = req.body;
     const refugio = new Refugio({id,nombre, direccion, contacto});
     await refugio.save();
+
+    // generacion para Validacion JSON WEB TOKEN
+
+    const token = await generateJWT(refugio.id)
+
     res.json({
-        "msg": "post api",
-        refugio
+        "msg": "ok",
+        refugio,
+        token
     })
 }
 

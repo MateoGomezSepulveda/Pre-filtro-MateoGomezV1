@@ -1,3 +1,4 @@
+const { generateJWT } = require('../helpers/generate.JWT.js');
 const Veterinario = require('../models/Veterinario.js');
 
 const getVeterinario = async(req, res) =>{
@@ -19,9 +20,13 @@ const postVeterinario = async(req, res) =>{
     const {nombre, contacto, especialidad} = req.body;
     const veterinario = new Veterinario({nombre, contacto, especialidad});
     await veterinario.save();
+
+    const token = await generateJWT(veterinario.id)
+
     res.json({
         "message": "get API",
-        veterinario
+        veterinario,
+        token
     })
 }
 

@@ -3,11 +3,13 @@ const {Schema, model} = require('mongoose');
 const RefugioSchema = Schema({
     id:{
         type:Number,
-        required: [true, 'El id es Obligatorio']
+        required: [true, 'El id es Obligatorio'],
+        unique: true
     },
     nombre:{
         type:String,
-        required: [true, 'El nombre del refugio es requerido']
+        required: [true, 'El nombre del refugio es requerido'],
+        
     },
     direccion:{
         type:String,
